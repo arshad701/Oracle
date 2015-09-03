@@ -1,0 +1,56 @@
+a). 8
+b). Date:   Thu Aug 20 18:05:41 2015 -0400 
+c).
+.classpath
+.gitattributes
+.gitignore
+.project
+README.txt.txt
+src/controller/HardwoodSeller.java
+src/model/WoodItem.java
+
+d). In the src folder the Hardwoodseller is modified once, and the Wooditem.java is modified twice.
+
+   the following log shows it:
+   commit e60a392cec6c7d73a108f47988245846c5d0a3ec
+Author: Esteban Parra <estebanpr014@gmail.com>
+Date:   Thu Aug 20 18:05:41 2015 -0400
+
+    Project Template Created
+
+    Created template for Hardwood Seller program:
+    - WoodItem class defined with constructiors and getter methods. Blank
+    toString method
+    - Main class with empty methods for delivery time computation and input
+    file reading
+
+D:\Java\Oracle>git log --follow src/model/WoodItem.java
+commit d5700dd1e09dd1535802a72f6122c6852f6e0f56
+Author: Esteban Parra <estebanpr014@gmail.com>
+Date:   Mon Aug 24 12:07:05 2015 -0400
+
+    Fixed variable naming
+
+    Fixed spelling error on variable naming
+
+commit e60a392cec6c7d73a108f47988245846c5d0a3ec
+Author: Esteban Parra <estebanpr014@gmail.com>
+Date:   Thu Aug 20 18:05:41 2015 -0400
+
+    Project Template Created
+
+    Created template for Hardwood Seller program:
+    - WoodItem class defined with constructiors and getter methods. Blank
+    toString method
+    - Main class with empty methods for delivery time computation and input
+    file reading
+
+e). Git status tells us the repository is uptodate or modified, it helps to diffrentiate between local repository to the git repository and if any changes done 
+   Local repository which needs to be updated or not.
+   While Git log file displays commited logs made in the repository after pushing.
+   
+f). git log --follow main.java
+
+g). git log --all --grep='transaction' -i
+
+h).git log --since="Jan 05 2014" --until="Jun 14 2015" --author='Lauren' 
