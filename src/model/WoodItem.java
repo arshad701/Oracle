@@ -4,7 +4,7 @@
 package model;
 
 /**
- * @author USER
+ * @author Arshad
  *
  */
 public class WoodItem {
@@ -12,6 +12,8 @@ public class WoodItem {
 	String type;
 	Double baseDeliveryTime;
 	Double price;
+	int quantity;
+	Double total_price;
 	
 	/**
 	 * Default constructor 
@@ -20,6 +22,8 @@ public class WoodItem {
 		this.type = "Empty";
 		this.baseDeliveryTime = 0.0;
 		this.price = 0.0;
+		this.quantity = 0;
+		this.total_price = 0.0;
 	}
 	
 	/**
@@ -28,10 +32,13 @@ public class WoodItem {
 	 * @param daseDeliveryTime base delivery time
 	 * @param price price per Bare Foot
 	 */
-	public WoodItem(String type, Double daseDeliveryTime, Double price) {
+	public WoodItem(String type, Double baseDeliveryTime, Double price, int quantity, double total_price) {
 		this.type = type;
-		this.baseDeliveryTime = daseDeliveryTime;
+		this.baseDeliveryTime = baseDeliveryTime;
 		this.price = price;
+		this.quantity = quantity;
+		this.total_price = total_price;
+	
 	}
 
 	/**
@@ -48,7 +55,7 @@ public class WoodItem {
 	 * 
 	 * @return the baseDeliverytime
 	 */
-	public Double getDaseDeliveryTime() {
+	public Double getBaseDeliveryTime() {
 		return baseDeliveryTime;
 	}
 
@@ -61,7 +68,15 @@ public class WoodItem {
 	public Double getPrice() {
 		return price;
 	}
-
+	
+	public int getQuantity() {
+		return quantity;
+	}
+	
+	public Double getTotal(){
+		return total_price;
+	}
+	
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
 	 * You may implement this method to fit your needs
